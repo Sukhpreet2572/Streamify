@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.str-chat__channel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #c9e8c9, #b7e7bb);
+  height: 100%;
+}
+
+.str-chat__container {
+  max-width: 1200px;
+  width: 100%;
+  height: 80% !important;
+  margin: 0 auto !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.str-chat__list {
+  background-color: #ffffff;
+  padding: 12px;
+}
+
+.str-chat__list-notifications {
+  display: none;
+}
+
+.str-chat__message-input {
+  border-top: 1px solid #ddd;
+}
+
+/* Fix only the three dots menu text visibility */
+.str-video__generic-menu button,
+.str-video__menu-container button {
+  color: white !important;
+}
+
+.str-video__generic-menu button:hover,
+.str-video__menu-container button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Fix participant names visibility */
+.str-video__participant-details {
+  background: rgba(0, 0, 0, 0.7) !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.str-video__participant-name {
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Hide unwanted menu options */
+.str-video__generic-menu button[data-testid*="allow-audio"],
+.str-video__generic-menu button[data-testid*="allow-video"], 
+.str-video__generic-menu button[data-testid*="allow-screen"],
+.str-video__generic-menu button[data-testid*="disable-audio"],
+.str-video__generic-menu button[data-testid*="disable-video"],
+.str-video__generic-menu button[data-testid*="disable-screen"],
+.str-video__menu-container button:contains("Allow audio"),
+.str-video__menu-container button:contains("Allow video"),
+.str-video__menu-container button:contains("Allow screen sharing"),
+.str-video__menu-container button:contains("Disable audio"),
+.str-video__menu-container button:contains("Disable video"),
+.str-video__menu-container button:contains("Disable screen sharing") {
+  display: none !important;
+}
